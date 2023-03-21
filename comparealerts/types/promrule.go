@@ -12,8 +12,8 @@ import (
 type PrometheusRule struct {
 	Spec PrometheusRuleSpec `yaml:"spec,omitempty"`
 	// some times the file can directly have 'PrometheusRuleSpec' fields
-	PrometheusRuleSpec `yaml:"groups,omitempty"`
-	prOpts             *PromRuleOptions
+	PrometheusRuleSpec
+	prOpts *PromRuleOptions
 }
 type PrometheusRuleSpec struct {
 	Groups []RuleGroup `yaml:"groups,omitempty"`
